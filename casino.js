@@ -1,11 +1,12 @@
 const prompt =require('prompt-sync')();
 
-const flip = Math.random() < 0.5 ? 'H' : 'T';
-
 let balance = 10
 
 function coinFlip(flipQ) {
+    const flip = Math.random() < 0.5 ? 'H' : 'T';
+    console.log(`The house flips ${flip}`);
     return flipQ === flip;
+ 
 }
 
 function addBet(bet) {
@@ -19,14 +20,19 @@ function subtractBet(bet) {
 do {
     let bet = prompt("Hello player! How much would you like to bet? ");
 
+    if (balance < bet) {
+        console.log("You don't have enough money! Get outa here!");
+        break;
+    }
+
     console.log(`${bet}`);
 
     let flipQ = prompt("Heads or Tails? (Type 'H' or 'T') ");
 
     console.log(`You chose ${flipQ}`);
-    console.log(`The house flips ${flip}`);
-    
-    if (coinFlip === true) {
+   
+
+    if (coinFlip(flipQ)) {
         addBet(bet);
         console.log(`Congratulations! You won the bet and ${bet} dollars has been added to your balance.`)
     } else {
@@ -35,9 +41,10 @@ do {
     }
 
     console.log(`Your balance is ${balance}`);
+    
 
 } while (balance > 0);
 
 if (balance <= 0) {
 console.log("You are out of money. The house always wins!");
-}
+} 
