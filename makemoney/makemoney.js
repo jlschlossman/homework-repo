@@ -1,4 +1,4 @@
-//when clicking submit button, read data from parts of form, then create an element utilizing data from form (or pull from pre-existing elements, hidden, then clone them?)
+//when clicking submit button, read data from parts of form, then create (loop) an element utilizing data from form (or pull from pre-existing elements, hidden, then clone them?) then add loop to count pre-existing coins
 
 (function () {
 
@@ -8,18 +8,22 @@ const getNumber = document.getElementById("howmany");
 const getCoin = document.getElementById("whichcoin");
 
 makeMoney.addEventListener("click", () => {
+        const numberInput = getNumber.value;
+        const coinInput = getCoin.value;
 
-    
+    // const newPennies =
+    // const newNickels=
+    // const newDimes =
+    // const newQuarters =
 
-// const newPenny =
-// const newNickel=
-// const newDime =
-// const newQuarter =
+    for (let i = 0; i <= numberInput ; i++) {
+        // create new div for every i
+    }
 
-    // output.append(newPDiv)
-    // output.append(newNDiv)
-    // output.append(newDDiv)
-    // output.append(newQDiv)
+        // output.append(newPennies)
+        // output.append(newNickles)
+        // output.append(newDimes)
+        // output.append(newQuarters)
 })
 
 
