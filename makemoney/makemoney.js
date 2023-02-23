@@ -4,30 +4,28 @@
 
 
 const makeMoney = document.getElementById("makemoney");
-const getNumber = document.getElementById("howmany");
-const getCoin = document.getElementById("whichcoin");
+
 
 makeMoney.addEventListener("click", () => {
-        const numberInput = getNumber.value;
-        const coinInput = getCoin.value;
+    const getNumber = document.getElementById("howmany");
+    const getCoin = document.getElementById("whichcoin");
+    console.log(getCoin.value);
+    console.log(getNumber.value);
 
-    // const newPennies =
-    // const newNickels=
-    // const newDimes =
-    // const newQuarters =
+    for (let i = 0; i <getNumber.value; i++) {
 
-    for (let i = 0; i <= numberInput ; i++) {
-        // create new div for every i
+        const newCoin = document.createElement("div");
+        newCoin.classList.add(getCoin.value);
+
+        document.body.append(newCoin)
     }
 
-        // output.append(newPennies)
-        // output.append(newNickles)
-        // output.append(newDimes)
-        // output.append(newQuarters)
-})
 
 
 
 
+
+
+
+});
 }());
-
