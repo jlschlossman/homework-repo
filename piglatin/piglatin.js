@@ -4,13 +4,15 @@
 */
 
 
-function translate (word) {
+function translate(word) {
     let wordPigLatin = word;
     for (let i = 0; i <= wordPigLatin.length; i++) {
         if (i === "a" || "e" || "i" || "o" || "u") {
-            if (i === [0])
+            if (i === [0]) {
+                wordPigLatin.push("yay");
+                return wordPigLatin;
+            }
         }
-
     }
-
 }
+console.log(translate("out"));
