@@ -1,0 +1,11 @@
+{
+  "name": "grades",
+  "version": "1.0.0",
+  "description": "",
+  "main": "grades.js",
+  "scripts": {
+    "test": "jest --watchAll --verbose"
+  },
+  "author": "",
+  "license": "ISC"
+}
