@@ -1,5 +1,6 @@
 const arrayFunction = require("./grades.js")
 
+
 describe("arrayFunction", () => {
     describe("addScore function", () => {
         test('item is added to scores', () => {

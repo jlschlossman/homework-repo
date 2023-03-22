@@ -5,4 +5,9 @@ function addScore(name, score) {
     scores.push(newScore) 
 }
 
-module.exports = {scores, addScore}
+function getScore(array, name) {
+    const score = array.find(score => score.name === name);
+    return score;
+}
+
+module.exports = {scores, addScore, getScore}
